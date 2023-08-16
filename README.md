@@ -44,7 +44,7 @@ Due to file size constraints, the ChEBI-20 and MoleculeNet datasets can be downl
 - [MoleculeNet Datasets](https://moleculenet.org/datasets-1)
 
 #### Data processing
-[data_processing.ipynb](#)
+[data_processing.ipynb](data/data_processing.ipynb)
 
 ### Model
 `GIT-MOL`
