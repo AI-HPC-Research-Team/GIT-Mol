@@ -3,7 +3,8 @@ Here, we introduce [GIT-Mol](https://arxiv.org/abs/2308.06911), a multi-modal la
 
 ![GIT-Mol overview](figures/figure1_x.png)
 **The overview of GIT-Mol**. **a. Molecular internal information**, including sequence and graph structure representations, emphasizes inherent chemical properties and simple topology; **b. Molecular external information**, e.g., images and text descriptions, provide richer details and help the human understanding; **c. Study case**, featuring molecule generation (from image, caption, or both to molecule) and molecule caption (from SMILES, graph, or both to caption). In molecule generation, our model accurately captures the organophosphate oxoanion structure as described in the caption. In comparison, MolT5 incorrectly represents the ring structure, and GPT-4 makes a mistake in the placement of the ketone functional group. GIT-Mol's output differs from the ground truth for the molecule caption task but still provides a correct and meaningful description of the SMILES string.
-**Note:** The sections on Data, Model, and Training below describe the contents of the respective directories. Due to size constraints and permissions, some data may not be uploaded.
+
+**Note:** The sections on Data, Model, and Training below describe the contents of the respective directories. Due to size constraints and permissions, some data and ckpts may not be uploaded.
 
 ### Data
 
@@ -51,6 +52,10 @@ Due to file size constraints, the ChEBI-20 and MoleculeNet datasets can be downl
 ### Model
 `GIT-MOL`
 - `ckpts` - This folder contains checkpoints of pretraining and finetuning
+    - [SwinTransformer-SwinOCSR](https://github.com/suanfaxiaohuo/SwinOCSR)
+    - [GIN-MoMu](https://github.com/ddz16/MoMu)
+    - [MolT5-base](https://huggingface.co/laituan245/molt5-base)
+    - [MolT5-large](https://huggingface.co/laituan245/molt5-large) 
 - `configs`
     - config.json - Config file of this model
     - deepspeed_config.json - Config file of deepspeed in Accelerate
