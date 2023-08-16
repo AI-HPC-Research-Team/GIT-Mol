@@ -1,7 +1,7 @@
 ## GIT-Mol
 Here, we introduce GIT-Mol, a multi-modal large language model that integrates the structure Graph, Image, and Text information, including the Simplified Molecular Input Line Entry System (SMILES) and molecule captions. To facilitate the integration of multi-modal molecular data, we propose GIT-Former, a novel paradigm capable of mapping all modalities into a unified latent space.
 
-**Note:** The sections on Data, Model, and Training and Evaluation below describe the contents of the respective directories. Due to size constraints and permissions, some data may not be uploaded.
+**Note:** The sections on Data, Model, and Training below describe the contents of the respective directories. Due to size constraints and permissions, some data may not be uploaded.
 
 ### Data
 
@@ -65,7 +65,7 @@ Due to file size constraints, the ChEBI-20 and MoleculeNet datasets can be downl
 - `utils`
     - utils.py
 
-### Training and Evaluation
+### Training
 `GIT-MOL`
 - `evaluations` - Evaluations of molecule translation tasks
     - fingerprint_metrics.py
@@ -74,7 +74,7 @@ Due to file size constraints, the ChEBI-20 and MoleculeNet datasets can be downl
 - `train`
     - pretrain.py
     - `finetune`
-        - molecule_translation.py - Finetuning of molecule translation task
+        - molecule_translation.py - Finetuning of the molecule translation task
         - `property_prediction`
             - finetune.py - Finetuning of molecule properties prediction task
             - model.py
@@ -84,7 +84,7 @@ Due to file size constraints, the ChEBI-20 and MoleculeNet datasets can be downl
 **Below are the specific parameter explanations for the `property_prediction` task:**
 #### property_prediction -- finetune.py 
 - `--modals`  
-  Modalities used in this task, contain graph2d, SMILES, or both.
+  Modalities used in this task contain graph2d, SMILES, or both.
 
 - `--pool`  
   Type: `str`  
