@@ -1,0 +1,48 @@
+{
+    "model": "GIT-Mol",
+    "data": {
+        "drug": {
+            "modality": [
+                "structure",
+                "image",
+                "text"
+            ],
+            "featurizer": {
+                "structure": {
+                    "name": "MultiScale",
+                    "scales": [
+                        "SMILES",
+                        "graph2d"
+                    ],
+                    "SMILES": {
+                        "name": "transformer",
+                        "transformer_type": "bert",
+                        "max_length": 256,
+                        "model_name_or_path": "../../ckpts/text_ckpts/scibert_scivocab_uncased"
+                    },
+                    "graph2d": {
+                        "name": "ogb"
+                    }
+                }
+            }
+        }
+    },
+    "network": {
+        "graph": {
+            "name": "MoMu",
+            "gin_hidden_dim": 300,
+            "gin_num_layers": 5,
+            "drop_ratio": 0.0,
+            "graph_pooling": "sum",
+            "graph_self": false,
+            "max_n_nodes": -1,
+            "bert_dropout": 0.0,
+            "bert_hidden_dim": 1024,
+            "output_dim": 300,
+            "projection_dim": 256,
+            "init_checkpoint": "../../ckpts/fusion_ckpts/momu/MoMuS.ckpt",
+            "param_key": "state_dict",
+            "stop_grad": false
+        },
+        "projection_dim": 256,
+}
