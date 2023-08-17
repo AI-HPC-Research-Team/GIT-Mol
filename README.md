@@ -1,14 +1,19 @@
-## GIT-Mol
-Here, we introduce [GIT-Mol](https://arxiv.org/abs/2308.06911), a multi-modal large language model that integrates the structure Graph, Image, and Text information, including the Simplified Molecular Input Line Entry System (SMILES) and molecule captions. To facilitate the integration of multi-modal molecular data, we propose GIT-Former, a novel paradigm capable of mapping all modalities into a unified latent space.
+# GIT-Mol
+[![arXiv](https://img.shields.io/badge/arXiv-2308.06911-b31b1b.svg)](https://arxiv.org/abs/2305.19523) 
 
+Here, we introduce GIT-Mol, a multi-modal large language model that integrates the structure Graph, Image, and Text information, including the Simplified Molecular Input Line Entry System (SMILES) and molecule captions. To facilitate the integration of multi-modal molecular data, we propose GIT-Former, a novel paradigm capable of mapping all modalities into a unified latent space.
+</br>
+</br>
 ![GIT-Mol overview](figures/figure1_x.png)
-**The overview of GIT-Mol**. **a. Molecular internal information**, including sequence and graph structure representations, emphasizes inherent chemical properties and simple topology; **b. Molecular external information**, e.g., images and text descriptions, provide richer details and help the human understanding; **c. Study case**, featuring molecule generation (from image, caption, or both to molecule) and molecule caption (from SMILES, graph, or both to caption). In molecule generation, our model accurately captures the organophosphate oxoanion structure as described in the caption. In comparison, MolT5 incorrectly represents the ring structure, and GPT-4 makes a mistake in the placement of the ketone functional group. GIT-Mol's output differs from the ground truth for the molecule caption task but still provides a correct and meaningful description of the SMILES string.
+</br>
+</br>
+**This figure is overview of GIT-Mol**. **a. Molecular internal information**, including sequence and graph structure representations, emphasizes inherent chemical properties and simple topology; **b. Molecular external information**, e.g., images and text descriptions, provide richer details and help the human understanding; **c. Study case**, featuring molecule generation (from image, caption, or both to molecule) and molecule caption (from SMILES, graph, or both to caption). In molecule generation, our model accurately captures the organophosphate oxoanion structure as described in the caption. In comparison, MolT5 incorrectly represents the ring structure, and GPT-4 makes a mistake in the placement of the ketone functional group. GIT-Mol's output differs from the ground truth for the molecule caption task but still provides a correct and meaningful description of the SMILES string.
 
 **Note:** The sections on Data, Model, and Training below describe the contents of the respective directories. Due to size constraints and permissions, some data and ckpts may not be uploaded.
 
-### Data
+## Data
 
-#### Pretrain_data
+### Pretrain_data
 `igdata` - This folder contains the data for pretraining GIT-Former with image, graph, and SMILES modalities.
 - train_4m.pkl
 - valid_400k.pkl
@@ -20,7 +25,7 @@ Here, we introduce [GIT-Mol](https://arxiv.org/abs/2308.06911), a multi-modal la
 `image2d` - Data of molecule images in the pretrain stage
 - cid.png
 
-#### Finetune_data
+### Finetune_data
 
 `ChEBI-20` - This folder contains the data for finetuning GIT-Mol on molecule generation(caption->SMILES)
 - train_26k.txt
@@ -46,16 +51,17 @@ Due to file size constraints, the ChEBI-20 and MoleculeNet datasets can be downl
 - [ChEBI-20_data](https://github.com/blender-nlp/MolT5/tree/main/ChEBI-20_data)
 - [MoleculeNet Datasets](https://moleculenet.org/datasets-1)
 
-#### Data processing
+### Data processing
 [data_processing.ipynb](data/data_processing.ipynb)
 
-### Model
+## Model
 `GIT-MOL`
 - `ckpts` - This folder contains checkpoints of pretraining and finetuning
     - [SwinTransformer-SwinOCSR](https://github.com/suanfaxiaohuo/SwinOCSR)
     - [GIN-MoMu](https://github.com/ddz16/MoMu)
     - [MolT5-base](https://huggingface.co/laituan245/molt5-base)
-    - [MolT5-large](https://huggingface.co/laituan245/molt5-large) 
+    - [MolT5-large](https://huggingface.co/laituan245/molt5-large)
+    - [SciBERT](https://huggingface.co/allenai/scibert_scivocab_uncased)
 - `configs`
     - config.json - Config file of this model
     - deepspeed_config.json - Config file of deepspeed in Accelerate
@@ -72,7 +78,7 @@ Due to file size constraints, the ChEBI-20 and MoleculeNet datasets can be downl
 - `utils`
     - utils.py
 
-### Training
+## Training
 `GIT-MOL`
 - `evaluations` - Evaluations of molecule translation tasks
     - fingerprint_metrics.py
@@ -89,7 +95,7 @@ Due to file size constraints, the ChEBI-20 and MoleculeNet datasets can be downl
             - loader.py
 
 **Below are the specific parameter explanations for the `property_prediction` task:**
-#### property_prediction -- finetune.py 
+### property_prediction -- finetune.py 
 - `--modals`  
   Modalities used in this task contain graph2d, SMILES, or both.
 
@@ -102,3 +108,22 @@ Due to file size constraints, the ChEBI-20 and MoleculeNet datasets can be downl
   Type: `str`  
   Default: `attention`  
   If we use graph2d and SMILES modalities in this task, we can choose the fusion mode of the two embeddings. Options: Attention or Weights.
+
+## References
+```
+[1]: Xu Z, Li J, Yang Z, et al. SwinOCSR: end-to-end optical chemical structure recognition using a Swin Transformer[J]. Journal of Cheminformatics, 2022, 14(1): 1-13.
+[2]: Su B, Du D, Yang Z, et al. A molecular multimodal foundation model associating molecule graphs with natural language[J]. arXiv preprint arXiv:2209.05481, 2022.(https://arxiv.org/abs/2209.05481)
+[3]: Edwards C, Lai T, Ros K, et al. Translation between molecules and natural language[J]. arXiv preprint arXiv:2204.11817, 2022.
+[4]: Beltagy I, Lo K, Cohan A. SciBERT: A pretrained language model for scientific text[J]. arXiv preprint arXiv:1903.10676, 2019.
+```
+## Citation
+```
+@misc{liu2023gitmol,
+      title={GIT-Mol: A Multi-modal Large Language Model for Molecular Science with Graph, Image, and Text}, 
+      author={Pengfei Liu and Yiming Ren and Zhixiang Ren},
+      year={2023},
+      eprint={2308.06911},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
