@@ -1,7 +1,11 @@
 # GIT-Mol
 [![arXiv](https://img.shields.io/badge/arXiv-2308.06911-b31b1b.svg)](https://arxiv.org/abs/2308.06911) 
+[![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.compbiomed.2024.108073-blue.svg)](https://doi.org/10.1016/j.compbiomed.2024.108073)
 
-Here, we introduce GIT-Mol, a multi-modal large language model that integrates the structure Graph, Image, and Text information, including the Simplified Molecular Input Line Entry System (SMILES) and molecule captions. To facilitate the integration of multi-modal molecular data, we propose GIT-Former, a novel paradigm capable of mapping all modalities into a unified latent space.
+Here, we introduce **GIT-Mol**, a multi-modal large language model that integrates the structure Graph, Image, and Text information, including the Simplified Molecular Input Line Entry System (**SMILES**) and molecule captions. To facilitate the integration of multi-modal molecular data, we propose **GIT-Former**, a novel paradigm capable of mapping all modalities into a unified latent space.
+
+The article has been accepted by *Computers in Biology and Medicine*.
+
 </br>
 </br>
 ![GIT-Mol overview](figures/figure1_x.png)
