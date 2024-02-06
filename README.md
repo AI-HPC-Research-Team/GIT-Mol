@@ -6,13 +6,8 @@ Here, we introduce **GIT-Mol**, a multi-modal large language model that integrat
 
 The article has been accepted by *Computers in Biology and Medicine*.
 
-</br>
-</br>
-
 ![GIT-Mol overview](figures/figure1_x.png)
 
-</br>
-</br>
 **An overview of GIT-Mol**.
 - **(a) Internal Information**: Includes sequence and graph structure representations, emphasizing inherent chemical properties and simple topology.
 - **(b) External Information**: For example, images and text descriptions provide richer details and help in human understanding.
