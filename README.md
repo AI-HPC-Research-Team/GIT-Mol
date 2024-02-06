@@ -7,7 +7,12 @@ Here, we introduce GIT-Mol, a multi-modal large language model that integrates t
 ![GIT-Mol overview](figures/figure1_x.png)
 </br>
 </br>
-**This figure is overview of GIT-Mol**. **a. Molecular internal information**, including sequence and graph structure representations, emphasizes inherent chemical properties and simple topology; **b. Molecular external information**, e.g., images and text descriptions, provide richer details and help the human understanding; **c. Study case**, featuring molecule generation (from image, caption, or both to molecule) and molecule caption (from SMILES, graph, or both to caption). In molecule generation, our model accurately captures the organophosphate oxoanion structure as described in the caption. In comparison, MolT5 incorrectly represents the ring structure, and GPT-4 makes a mistake in the placement of the ketone functional group. GIT-Mol's output differs from the ground truth for the molecule caption task but still provides a correct and meaningful description of the SMILES string.
+**An overview of GIT-Mol**.
+- **(a) Internal Information**: Includes sequence and graph structure representations, emphasizing inherent chemical properties and simple topology.
+- **(b) External Information**: For example, images and text descriptions provide richer details and help in human understanding.
+- **(c) GIT-Former Multi-modal Encoder**: Architecture and Pre-train Strategy of GIT-Former. GIT-Former aligns graph, image, and text with the target text modality (SMILES strings or captions) using self-attention and cross-attention. The learnable queries interact with each other and the various modalities through these attention layers. Xmodal-Text Matching (XTM) and Xmodal-Text Contrastive Learning (XTC) represent our self-supervised learning strategies tailored for specific modalities (X) and target text modalities.
+- **(d) Multi-modal Molecular Tasks**: In cross-modal tasks, GIT-Former generates different embeddings based on various inputs, which MolT5 then decodes into the target text modality and the MLP model for property prediction tasks.
+
 
 **Note:** The sections on Data, Model, and Training below describe the contents of the respective directories. Due to size constraints and permissions, some data and ckpts may not be uploaded.
 
@@ -119,12 +124,12 @@ Due to file size constraints, the ChEBI-20 and MoleculeNet datasets can be downl
 ```
 ## Citation
 ```
-@misc{liu2023gitmol,
-      title={GIT-Mol: A Multi-modal Large Language Model for Molecular Science with Graph, Image, and Text}, 
-      author={Pengfei Liu and Yiming Ren and Zhixiang Ren},
-      year={2023},
-      eprint={2308.06911},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+@article{liu2024git,
+  title={Git-mol: A multi-modal large language model for molecular science with graph, image, and text},
+  author={Liu, Pengfei and Ren, Yiming and Tao, Jun and Ren, Zhixiang},
+  journal={Computers in Biology and Medicine},
+  pages={108073},
+  year={2024},
+  publisher={Elsevier}
 }
 ```
