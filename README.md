@@ -8,7 +8,9 @@ The article has been accepted by *Computers in Biology and Medicine*.
 
 </br>
 </br>
+
 ![GIT-Mol overview](figures/figure1_x.png)
+
 </br>
 </br>
 **An overview of GIT-Mol**.
