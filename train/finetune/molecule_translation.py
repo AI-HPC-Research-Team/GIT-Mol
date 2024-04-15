@@ -245,7 +245,7 @@ def test_git(test_loader, model, task_list, device):
                     
                 #test_loss += loss.detach().cpu().item()
             #print(f"test_loss : {test_loss}")
-            # 检查cid_list和result_list长度是否一致
+
             if('isoSMILES' in outputs_modal):
                 assert len(smiles_list) == len(pre_smiles_list), "Lists must have the same length."
                 result = test_smiles(cid_list, smiles_list, pre_smiles_list, caption_list, inputs_modal)
