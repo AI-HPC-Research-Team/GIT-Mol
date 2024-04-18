@@ -2,6 +2,14 @@
 [![arXiv](https://img.shields.io/badge/ArXiv-2308.06911-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2308.06911) 
 [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.compbiomed.2024.108073-blue.svg)](https://doi.org/10.1016/j.compbiomed.2024.108073)
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/git-mol-a-multi-modal-large-language-model/image-captioning-on-chebi-20)](https://paperswithcode.com/sota/image-captioning-on-chebi-20?p=git-mol-a-multi-modal-large-language-model)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/git-mol-a-multi-modal-large-language-model/text-based-de-novo-molecule-generation-on)](https://paperswithcode.com/sota/text-based-de-novo-molecule-generation-on?p=git-mol-a-multi-modal-large-language-model)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/git-mol-a-multi-modal-large-language-model/drug-discovery-on-clintox)](https://paperswithcode.com/sota/drug-discovery-on-clintox?p=git-mol-a-multi-modal-large-language-model)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/git-mol-a-multi-modal-large-language-model/drug-discovery-on-bbbp)](https://paperswithcode.com/sota/drug-discovery-on-bbbp?p=git-mol-a-multi-modal-large-language-model)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/git-mol-a-multi-modal-large-language-model/drug-discovery-on-sider)](https://paperswithcode.com/sota/drug-discovery-on-sider?p=git-mol-a-multi-modal-large-language-model)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/git-mol-a-multi-modal-large-language-model/drug-discovery-on-toxcast)](https://paperswithcode.com/sota/drug-discovery-on-toxcast?p=git-mol-a-multi-modal-large-language-model)
+
 Here, we introduce **GIT-Mol**, a multi-modal large language model that integrates the structure Graph, Image, and Text information, including the Simplified Molecular Input Line Entry System (**SMILES**) and molecule captions. To facilitate the integration of multi-modal molecular data, we propose **GIT-Former**, a novel paradigm capable of mapping all modalities into a unified latent space.
 
 The article has been accepted by *Computers in Biology and Medicine*.
