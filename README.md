@@ -10,6 +10,8 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/git-mol-a-multi-modal-large-language-model/drug-discovery-on-sider)](https://paperswithcode.com/sota/drug-discovery-on-sider?p=git-mol-a-multi-modal-large-language-model)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/git-mol-a-multi-modal-large-language-model/drug-discovery-on-toxcast)](https://paperswithcode.com/sota/drug-discovery-on-toxcast?p=git-mol-a-multi-modal-large-language-model)
 
+🎉🎉🎉 Our article was published in Computers in Biology and Medicine, February 2024 🥳
+
 Here, we introduce **GIT-Mol**, a multi-modal large language model that integrates the structure Graph, Image, and Text information, including the Simplified Molecular Input Line Entry System (**SMILES**) and molecule captions. To facilitate the integration of multi-modal molecular data, we propose **GIT-Former**, a novel paradigm capable of mapping all modalities into a unified latent space.
 
 The article has been accepted by *Computers in Biology and Medicine*.
