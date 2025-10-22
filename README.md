@@ -27,6 +27,7 @@ The article has been accepted by *Computers in Biology and Medicine*.
 - valid_400k.pkl
 
 `igcdata` - This folder contains the data for pretraining GIT-Former with image, graph, and caption modalities.
+- https://pan.baidu.com/s/1YaB5f1_eB0i4NZBc9rAoLA code: 4wa4 
 - train_220k.pkl
 - valid_20k.pkl
 
