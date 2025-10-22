@@ -27,6 +27,7 @@ The article has been accepted by *Computers in Biology and Medicine*.
 - valid_400k.pkl
 
 `igcdata` - This folder contains the data for pretraining GIT-Former with image, graph, and caption modalities. 
+https://huggingface.co/datasets/liupf/Git-mol-igcdata
 - train_220k.pkl
 - valid_20k.pkl
 
